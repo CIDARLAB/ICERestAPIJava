@@ -38,6 +38,14 @@ public class ICETest {
     public void tearDown() {
     }
 
-        
+    
+    @Test
+    public void testICEFlow(){
+        ICE ice = new ICE();
+        AccessToken token = ice.createAccessToken("prash@bu.edu", "supersafepassword");
+        System.out.println(token.getSessionId());
+        //ice.getAccessToken(token.getSessionId());
+        ice.getPart(token.getSessionId(), "JPUB_007685");
+    }    
     
 }
