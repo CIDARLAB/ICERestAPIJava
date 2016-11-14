@@ -46,6 +46,25 @@ public class ICETest {
         System.out.println(token.getSessionId());
         //ice.getAccessToken(token.getSessionId());
         ice.getPart(token.getSessionId(), "JPUB_007685");
+        /*ice.createPart(token.getSessionId(), "{\n" +
+"        type: 'PLASMID',\n" +
+"        name: \"pNJH00010\",\n" +
+"        alias: \"pS8c-gfpuv_sigpep\",\n" +
+"        status: 'Complete',\n" +
+"        shortDescription: \"gpfuv with a cterminal peptide tag for beta-carboxysome localization (as constructed by Jay Kinney in Cheryl Kerfeld's lab) under the control of PBAD. The BioBrick sites have been removed, in anticipation of further construction steps.\",\n" +
+"        references: \"Hillson, N.J., Rosengarten, R.D., and Keasling J.D. (2012) j5 DNA Assembly Design Automation Software. ACS Synthetic Biology 1 (1), 14-21. DOI: 10.1021/sb2000116\",\n" +
+"        bioSafetyLevel: 1,\n" +
+"        principalInvestigator: \"Nathan J Hillson\",\n" +
+"        selectionMarkers: [\"Chloramphenicol\"],\n" +
+"        fundingSource: \"DE-AC02-05CH11231\",\n" +
+"        plasmidData: {\n" +
+"            backbone: \"pBbS8c\",\n" +
+"            originOfReplication: \"pSC101\",\n" +
+"            promoters: \"Arabinose\",\n" +
+"            circular: true\n" +
+"        }");*/
+        
+        ice.getPartPermissions(token.getSessionId(), "JPUB_007685");
     }    
     
 }
